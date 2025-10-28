@@ -3,88 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Task</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      div {
-        padding: 20px;
-        width: 100%;
-      }
-      table {
-        font-family: arial;
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      td,
-      th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
-      .status-fail,
-      .status-pass {
-        font-weight: 700;
-      }
-      .status-pass {
-        color: green;
-      }
-      .status-fail {
-        color: red;
-      }
-    </style>
+    <title>Student data</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Students Marksheet</h1>
-    <div>
+    <header><h1>Student Data</h1></header>
+    <section class="table">
       <table class="students">
         <tr>
           <th>Student Name</th>
           <th>Marks</th>
-          <th>status</th>
+          <th>Status</th>
         </tr>
       </table>
-    </div>
-    <script>
-      const data = [
-        { firstName: "Rizwan", lastName: "Ahmad", marks: 85 },
-        { firstName: "Israr", lastName: "Iqbal", marks: 70 },
-        { firstName: "Jaweria", lastName: "Kamran", marks: 60 },
-        { firstName: "Ariba", lastName: "Mustaq", marks: 30 },
-        { firstName: "Hammad", lastName: "Rubani", marks: 25 },
-      ];
-
-      const transformedData = data.map((std) => {
-        const firstName = std.firstName;
-        const lastName = std.lastName;
-        const marks = std.marks;
-        const fullName = `${firstName} ${lastName}`;
-        const status = marks >= 33 ? "Pass" : "Fail";
-        return { fullName, status, marks };
-      });
-
-      const rowData = transformedData.map((d) => {
-        const studentRow = document.createElement("tr");
-        const statusClass = d.status === "Pass" ? "status-pass" : "status-fail";
-        studentRow.innerHTML = `<td>${d.fullName}</td>
-         <td>${d.marks}</td>
-          <td class= ${statusClass}>${d.status}</td>`;
-
-        return studentRow;
-      });
-      const students = document.querySelector(".students");
-      rowData.map((row) => {
-        students.appendChild(row);
-      });
-    </script>
+    </section>
+    <section class="items">
+        <h2>Showing 1-10 out of 200</h2>
+    </section>
+    <section class="pagination">
+      <button class="prev">Previous</button>
+      <button class="next">Next</button>
+    </section>
+    <script src="./script.js"></script>
   </body>
 </html>
