@@ -30,7 +30,7 @@ const totalPages = Math.ceil(transformedData.length / itemsPerPage);
 
 function displayPage(page) {
     
-    studentsContainer.innerHTML = "";
+    studentsContainer.innerHTML= "";
 
     currentPage = page;
 
