@@ -1,15 +1,15 @@
 const data = [
-    { firstName: "Rizwan", lastName: "Ahmad", marks: 85 },
-    { firstName: "Israr", lastName: "Iqbal", marks: 70 },
-    { firstName: "Jaweria", lastName: "Kamran", marks: 60 },
-    { firstName: "Ariba", lastName: "Mustaq", marks: 30 },
-    { firstName: "Hammad", lastName: "Rubani", marks: 25 },
-    { firstName: "Ali", lastName: "Raza", marks: 90 },
-    { firstName: "Yusra", lastName: "Javeed", marks: 75 },
-    { firstName: "talha", lastName: "razaq", marks: 31 },
-    { firstName: "Abdul", lastName: "Sami", marks: 40 },
-    { firstName: "Asad", lastName: "Saddique", marks: 88 },
-    { firstName: "Ahmad", lastName: "Raza", marks: 15 },
+    {id:1, firstName: "Rizwan", lastName: "Ahmad", marks: 85 },
+    { id: 2, firstName: "Israr", lastName: "Iqbal", marks: 70 },
+    { id: 3, firstName: "Jaweria", lastName: "Kamran", marks: 60 },
+    { id: 4, firstName: "Ariba", lastName: "Mustaq", marks: 30 },
+    { id: 5, firstName: "Hammad", lastName: "Rubani", marks: 25 },
+    { id: 6, firstName: "Ali", lastName: "Raza", marks: 90 },
+    { id: 7, firstName: "Yusra", lastName: "Javeed", marks: 75 },
+    { id: 8, firstName: "talha", lastName: "razaq", marks: 31 },
+    { id: 9, firstName: "Abdul", lastName: "Sami", marks: 40 },
+    { id: 10, firstName: "Asad", lastName: "Saddique", marks: 88 },
+    { id: 11, firstName: "Ahmad", lastName: "Raza", marks: 15 },
 ];
 
 const transformedData = data.map((std) => {
