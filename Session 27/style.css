@@ -1,0 +1,72 @@
+ body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #file-tabs {
+            background-color: #252526;
+            padding: 0 10px;
+        }
+        #file-tabs button {
+            background: none;
+            border: none;
+            color: #999;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #file-tabs button.active {
+            background-color: hsl(229, 100%, 45%);
+            color: #fff;
+
+        }
+        #editor-container {
+            flex-grow: 1;
+            height: 60vh; 
+            border-bottom: 2px solid #ddd;
+        }
+        #controls {
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        #run-button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #run-button:hover {
+            background-color: #005a9e;
+        }
+        .editor-title,.console-title{
+            padding-left: 10px ;
+            margin: 10px;
+        }
+        #console-container {
+            flex-grow: 1;
+            height: 35vh;
+            background-color: #1e1e1e;
+            color: #ccc;
+            overflow-y: auto;
+        }
+        #console-container pre {
+            margin: 0;
+            padding: 10px;
+            font-family: "Consolas", "Courier New", monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        #console-container pre .log-error {
+            color: #ff8a80;
+        }
