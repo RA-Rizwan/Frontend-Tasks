@@ -8,26 +8,25 @@ const userWithTransactions=[
 
     const findUserById=(id,callback)=>{
     const user=userWithTransactions.find((u)=>u.id===id);
-    user?callback(user):callback("User Not Found");}
+    if(user){ console.log("User Name :"+ user.name);
+    callback(user)
+    }else{console.log("User Not Found")}}
 
-    const getTransactions =(user,callback)=>{
-    user.transactions && user.transactions.length>0 ?callback(user.transactions):callback("No Transaction Found")};
+    const getTransactions =(user)=>{
+      if(user.transactions && user.transactions.length>0){
+       console.log("Transactions :"+ user.transactions);
+       calculateTotal(user.transactions)
+      }else{console.log("No Transaction Found")}}
 
-    const calculateTotal=(transactions,callback)=>{
-        const total =transactions.reduce((sum,t)=>sum+t,0);
-        callback(total);}
+    const calculateTotal=(transactions)=>{
+       let total = 0;
+       for (let i = 0; i < transactions.length; i++) {
+       total += transactions[i];
+  }
+        console.log("Total :"+ total)
+        }
 
-findUserById(4,(user)=>{
-    console.log("User found :"+ user.name);
-
-    getTransactions(user,(transactions)=>{
-        console.log("Transactions :"+ transactions);
-
-        calculateTotal(transactions,(total)=>{
-            console.log("Total of all transactions :"+ total);
-        });
-    });
-});
+findUserById(4,getTransactions);
 
 `,
 };
